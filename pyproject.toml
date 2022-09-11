@@ -38,5 +38,6 @@ path = "stable_diffusion_waylonwalker_com/__about__.py"
 clean = "markata clean"
 build = "markata build"
 serve = "python -m http.server 8000 --directory=markout"
+clean-build = ['clean', 'build',]
 build-serve = ['clean', 'build', 'serve']
 

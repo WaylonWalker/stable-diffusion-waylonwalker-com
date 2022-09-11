@@ -20,7 +20,7 @@ reverse="True"
 card_template="""
 <li class='post'>
     <a href='/{{ title.replace("png", "webp") }}'>
-        <img src='/{{ title.replace("png", "webp") }}' height='{{ height }}' width='{{ width }}'>
+        <img src='/{{ title.replace("png", "webp") }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
         <summary> command </summary>

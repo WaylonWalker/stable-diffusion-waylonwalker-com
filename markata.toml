@@ -19,8 +19,8 @@ filter="True"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/{{ title }}'>
-        <img src='/{{ title }}'>
+    <a href='/{{ title.replace("png", "webp") }}'>
+        <img src='/{{ title.replace("png", "webp") }}'>
     </a>
     <details>
         <summary> command </summary>

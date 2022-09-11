@@ -1,0 +1,30 @@
+[markata]
+assets_dir = "static"
+icon = "8bitcc.png"
+description = "Waylon Walker's Stable Diffusions"
+url = "stable-diffusion.waylonwalker.com"
+
+hooks = [
+"markata.plugins.base_cli",
+"markata.plugins.tui",
+"markata.plugins.copy_assets",
+"markata.plugins.feeds",
+"stable_diffusion_waylonwalker_com.load"
+]
+
+
+[markata.feeds.archive]
+title="archive"
+filter="True"
+reverse="True"
+card_template="""
+<li class='post'>
+    <a href='/{{ title }}'>
+        <img src='/{{ title }}'>
+    </a>
+    <details>
+        <summary> command </summary>
+        {{ command }} 
+    </details>
+</li>
+"""

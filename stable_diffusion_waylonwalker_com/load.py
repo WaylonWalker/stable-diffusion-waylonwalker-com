@@ -16,6 +16,14 @@ class Prompt:
     file: Path
     command: str
 
+    def __post_init__(self):
+        self.title = self.file.name
+        self.slug = self.file.name
+        self.prompt = self.command.split('"')[1]
+        self.params = {p[1]: p[2:] for p in self.command.split('"')[2].split()}
+        self.height = self.params["H"]
+        self.width = self.params["W"]
+
     def __getitem__(self, key):
         return self.to_dict()[key]
 
@@ -23,12 +31,7 @@ class Prompt:
         return self.to_dict().keys()
 
     def to_dict(self):
-        return {
-            "file": self.file,
-            "command": self.command,
-            "title": self.file.name,
-            "slug": self.file.name,
-        }
+        return vars(self)
 
 
 @hook_impl

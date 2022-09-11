@@ -3,6 +3,9 @@ assets_dir = "static"
 icon = "8bitcc.png"
 description = "Waylon Walker's Stable Diffusions"
 url = "stable-diffusion.waylonwalker.com"
+body_width='100vw'
+edit=false
+
 
 hooks = [
 "markata.plugins.base_cli",
@@ -12,6 +15,24 @@ hooks = [
 "stable_diffusion_waylonwalker_com.load"
 ]
 
+[[markata.head]]
+text = """
+<style>
+img {
+width: 100%;
+height: auto;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  flex: 1 2 400px;
+}
+</style>
+
+"""
 
 [markata.feeds.archive]
 title="archive"
@@ -28,3 +49,30 @@ card_template="""
     </details>
 </li>
 """
+
+[[markata.seo]]
+name = "og:type"
+property = "og:type"
+content = "article"
+
+[[markata.seo]]
+name = "og:author"
+property = "og:author"
+content = "Waylon Walker"
+
+[[markata.seo]]
+name = "og:site_name"
+property = "og:site_name"
+content = "Waylon Walker"
+
+[[markata.seo]]
+name = "theme-color"
+content="#322D39"
+
+[[markata.seo]]
+name = "twitter:creator"
+content="@_waylonwalker"
+
+[markata.prevnext]
+prevnext_color_angle = "#ff66c4"
+

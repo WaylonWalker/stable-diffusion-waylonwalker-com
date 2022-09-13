@@ -35,9 +35,11 @@ Source = "https://github.com/unknown/stable-diffusion-waylonwalker-com"
 path = "stable_diffusion_waylonwalker_com/__about__.py"
 
 [tool.hatch.envs.default.scripts]
+dream = "cd ../stable-diffusion/ && .venv/bin/python scripts/dream.py --outdir ../stable-diffusion-waylonwalker-com/original"
 clean = "markata clean"
 build = "markata build"
+tui = "markata tui"
 serve = "python -m http.server 8000 --directory=markout"
 clean-build = ['clean', 'build',]
-build-serve = ['clean', 'build', 'serve']
+build-serve = ['clean', 'build', 'tui']
 

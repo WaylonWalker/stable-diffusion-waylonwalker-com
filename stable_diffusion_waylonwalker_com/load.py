@@ -70,5 +70,5 @@ def save(markata) -> None:
     for article in markata.articles:
         # copy from original to static
         # only in local dev, originals are not in prod
-        if article.webp.exists().exists():
+        if article.webp.exists():
             shutil.copy(article.webp, assets_dir)

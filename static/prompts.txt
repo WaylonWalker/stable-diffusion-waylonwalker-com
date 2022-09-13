@@ -1,0 +1,1 @@
+../stable-diffusion-waylonwalker-com/static/000008.128044495.png: "test" -s50 -W512 -H512 -C7.5 -Ak_lms -S128044495

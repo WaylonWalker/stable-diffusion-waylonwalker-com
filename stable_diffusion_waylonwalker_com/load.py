@@ -68,4 +68,7 @@ def render(markata) -> None:
 def save(markata) -> None:
     assets_dir = Path(markata.config.get("assets_dir", ""))
     for article in markata.articles:
-        shutil.copy(article.webp, assets_dir)
+        # copy from original to static
+        # only in local dev, originals are not in prod
+        if self.article.webp.exists().exists():
+            shutil.copy(article.webp, assets_dir)

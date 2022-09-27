@@ -15,8 +15,8 @@ hooks = [
 "stable_diffusion_waylonwalker_com.load"
 ]
 
-[[markata.head]]
-text = """
+[[markata.head.text]]
+value = """
 <style>
 img {
 width: 100%;
@@ -50,26 +50,23 @@ card_template="""
 </li>
 """
 
-[[markata.seo]]
+[[markata.head.meta]]
 name = "og:type"
-property = "og:type"
 content = "article"
 
-[[markata.seo]]
+[[markata.head.meta]]
 name = "og:author"
-property = "og:author"
 content = "Waylon Walker"
 
-[[markata.seo]]
+[[markata.head.meta]]
 name = "og:site_name"
-property = "og:site_name"
 content = "Waylon Walker"
 
-[[markata.seo]]
+[[markata.head.meta]]
 name = "theme-color"
 content="#322D39"
 
-[[markata.seo]]
+[[markata.head.meta]]
 name = "twitter:creator"
 content="@_waylonwalker"
 

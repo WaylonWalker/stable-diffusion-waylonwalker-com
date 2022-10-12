@@ -2,7 +2,7 @@
 assets_dir = "static"
 icon = "8bitcc.png"
 description = "Waylon Walker's Stable Diffusions"
-url = "stable-diffusion.waylonwalker.com"
+url = "https://stable-diffusion.waylonwalker.com"
 body_width='100vw'
 edit=false
 
@@ -73,4 +73,3 @@ content="@_waylonwalker"
 
 [markata.prevnext]
 prevnext_color_angle = "#ff66c4"
-
